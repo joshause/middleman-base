@@ -35,9 +35,16 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+helpers do
+  def nav_active(path)
+    current_page.path == path ? 'class="active"' : ''
+  end
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
    activate :livereload
+   activate :directory_indexes
 end
 
 # Methods defined in the helpers block are available in templates

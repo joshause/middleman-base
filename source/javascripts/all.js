@@ -1,4 +1,6 @@
+//= require_tree .
 //= require jquery
+//= require lunr.min
 
 $(window).resize(function() {
   var more = document.getElementById("js-navigation-more");
@@ -20,6 +22,7 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
+
   var menuToggle = $("#js-mobile-menu").unbind();
   $("#js-navigation-menu").removeClass("show");
 
@@ -31,4 +34,19 @@ $(document).ready(function() {
       }
     });
   });
+});
+
+var lunrIndex = null;
+var lunrData  = null;
+
+// Download index data
+$.ajax({
+  url: 'search/lunr-index.json',
+  cache: true,
+  method: 'GET',
+  success: function(data) {
+    lunrData = data;
+    lunrIndex = lunr.Index.load(lunrData.index);
+    console.log(lunrData);
+  }
 });
