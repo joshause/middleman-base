@@ -349,4 +349,30 @@ header.navigation {
       }
     }
   }
+
+  .searchbar {
+    background-color: $medium-gray;
+    padding: 20px;
+    .content {
+      color: $dark-gray;
+      .result {
+        margin: 0 0 10px 0;
+
+        &.active {
+          color: white;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          .description {
+            font-size: $base-font-size/1.2;
+            color: $light-gray;
+          }
+        }
+      }
+      :last-child {
+        margin: 0 0 0 0;
+      }
+    }
+  }
 }

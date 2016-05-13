@@ -37,7 +37,7 @@
 
 helpers do
   def nav_active(path)
-    current_page.path == path ? 'class="active"' : ''
+    current_page.path == path ? {:class => "active"} : {}
   end
 end
 
@@ -45,7 +45,10 @@ end
 configure :development do
    activate :livereload
    activate :directory_indexes
+
 end
+
+activate :lunr
 
 # Methods defined in the helpers block are available in templates
 # helpers do
