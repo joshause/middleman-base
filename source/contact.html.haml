@@ -8,7 +8,7 @@ description: Contact form
   .side-image-content
     %h4 Contact Form
     %p Would you like more information?
-    %form{:action => "https://formspree.io/your@email.com", :method => "POST"}
+    %form{:action => "HIDDEN", :method => "POST", :id => "contact-form"}
       %label{:for => "contact-form-name"} Name
       %input#contact-form-name{:name => "name", :type => "text"}/
       %label{:for => "contact-form-email"} Email
