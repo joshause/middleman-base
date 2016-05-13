@@ -1,0 +1,19 @@
+---
+title: Contact
+description: Contact form
+---
+
+.side-image
+  .images-wrapper
+  .side-image-content
+    %h4 Contact Form
+    %p Would you like more information?
+    %form{:action => "https://formspree.io/your@email.com", :method => "POST"}
+      %label{:for => "contact-form-name"} Name
+      %input#contact-form-name{:name => "name", :type => "text"}/
+      %label{:for => "contact-form-email"} Email
+      %input#contact-form-email{:name => "_replyto", :type => "email"}/
+      %input{:type => "submit", :value => "Send"}/
+      %input{:name => "_gotcha", :style => "display:none", :type => "text"}/
+      %input{:name => "_next", :type => "hidden", :value => "http://highlowmedia.netlify.com/thanks"}/
+      %input{:name => "_subject", :type => "hidden", :value => "Contact form submission"}/

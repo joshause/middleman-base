@@ -34,6 +34,12 @@ $(document).ready(function() {
     });
   });
 
+  // contact form
+  var base64_email = 'am9zaHVhLmF1c2VAZ21haWwuY29t';
+  var base_url = 'https://formspree.io/';
+  var action = base_url + atob(base64_email);
+  $('#contact-form').attr('action', action);
+
 });
 
 $(function(){
