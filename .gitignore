@@ -10,7 +10,7 @@
 # Ignore the build directory
 /build
 
-# Ignore data contentful api hash
+# Ignore Contentful API space hashes
 .*-space-hash
 
 # Ignore cache

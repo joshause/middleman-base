@@ -7,7 +7,13 @@ index: true
 .hero
   .hero-content
     %img.hero-logo{:alt => "Logo Image", :src => "https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png"}/
-    %p Hero lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni modi doloremque excepturi laudantium maxime explicabo cumque deleniti voluptate deserunt laudantium maxime explicabo cumque deleniti voluptate deserunt laudantium maxime explicabo cumque deleniti voluptate deserunt.
+    %p Hero lorem ipsum dolor sit amet.
+
+    %h2 Brands
+    %ol
+      - data.brands.brand.each do |id, brand|
+        %li= brand["companyName"]
+
 .flex-boxes
   %a.flex-box.flex-box-big{:href => "javascript:void(0)"}
     %img{:alt => "", :src => "https://raw.githubusercontent.com/thoughtbot/refills/49db8c0f2f8066c2c3a275781503fe3303a1a9fc/source/images/placeholder.png"}/

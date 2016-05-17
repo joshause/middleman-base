@@ -97,9 +97,8 @@ configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css
 
-  # Minify Javascript & HTML on build
+  # Minify Javascript on build
   activate :minify_javascript
-  activate :minify_html
 
   # Enable cache buster
   # activate :asset_hash
