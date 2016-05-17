@@ -18,3 +18,6 @@ gem 'neat'
 gem 'bitters'
 gem 'jquery-middleman'
 gem 'middleman-lunr'
+gem "contentful_middleman"
+gem 'middleman-dotenv'
+gem "middleman-favicon-maker", "~> 3.7"
